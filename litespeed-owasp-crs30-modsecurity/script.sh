@@ -7,6 +7,8 @@ echo 'script dir:' $script_dir
 mkdir $script_dir/tmp
 ls
 
+apt-get install -y ols-modsecurity
+
 git clone https://github.com/coreruleset/coreruleset $script_dir/tmp/coreruleset
 mv $script_dir/tmp/coreruleset/crs-setup.conf.example $script_dir/tmp/coreruleset/crs-setup.conf
 mv $script_dir/tmp/coreruleset/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example $script_dir/tmp/coreruleset/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf
